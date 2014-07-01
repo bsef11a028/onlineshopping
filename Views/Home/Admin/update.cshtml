@@ -1,0 +1,19 @@
+﻿@model Web_Store.Models.Product
+
+@{
+    ViewBag.Title = "update";
+}
+
+<h2>update</h2>
+
+<form action="/Admin/saveupdated" method="post">
+Product Name <br />
+<input type="text" name="name" value="@Model.pname"/><br />
+Product Category <br />
+<input type="text" name="name" value="@Model.category" /><br />
+Product Price <br />
+<input type="text" name="name" value="@Model.price"/><br />
+
+<input type="submit" value="Update" />
+
+    </form>

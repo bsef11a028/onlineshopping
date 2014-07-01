@@ -1,0 +1,16 @@
+﻿@model Web_Store.Models.Product
+
+@{
+    ViewBag.Title = "deleteitem";
+}
+
+<h2>deleteitem</h2>
+
+
+<form action="/Admin/delete" method="post">
+
+   ID <br />
+    <input type="text" name="id" /><br />
+    <input type="submit" value="Delete" />
+
+</form>

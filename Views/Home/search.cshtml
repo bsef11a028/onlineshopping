@@ -1,0 +1,37 @@
+﻿@model Web_Store.Models.Product
+
+@{
+    ViewBag.Title = "search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+<script src="~/Scripts/jquery-1.4.1.min.js"></script>
+<h2>Search using Ajax</h2>
+Enter Name:<input type="text" name="Name" id="Name" />
+<input type="button" value="Search" id="b1" />
+<table  id="t1"></table>
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $('#b1').click(function () {
+            
+            var name = $('#Name').val();
+            alert(name);
+            $.getJSON('/Home/searchAjax?us=' + name, function (x1) {
+      
+                
+                    $.each(x1, function (i, item) {
+                        $("#t1").append("<tr bgcolor= lightblue><td>" + item.Name + "</td><td>" + item.Price + "</td>" + "<td> <img src=~/Files/" + "'" + item.Image + "'" + "height=50 width=50> </td>" + "</tr>");
+                    });
+               
+            });
+        });
+        });
+      
+
+
+</script>
+

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>index</h2>
+
+@model Web_Store.Models.Order
+
+<form action="/Admin/Save" method="post" enctype="multipart/form-data" >
+
+    <table border="1" align="center">
+
+        <tr><th>------------------------------</th></tr>
+        <tr><th> UPLOAD FILE </th></tr>
+        <tr><th>------------------------------</th></tr>
+        <tr><th>
+         <input type="file" name="image" />  </th></tr>
+    
+    <tr><th><input type="submit" value="upload" /> </th></tr>
+
+  
+
+    </table>
+
+</form>
+
+
+<form action="/Admin/checkorder" method="post" >
+<table border="1">     <tr><th>------------------------------</th></tr>
+        <tr><th> Check Orders <</th></tr>
+        <tr><th>------------------------------</th></tr>
+
+  <tr> Enter Order ID : <input type="text" name="id" id="i" /></tr>
+
+
+     <tr><th><input type="submit" value="View" /> </th></tr>
+
+    </table>
+
+</form>
+ 
+<form action="/Admin/additem" method="post" >
+
+    <table border="1" align="center">
+        <tr><th> Add Product </th> <th><input type="submit" value="Add" /> </th></tr>
+    </table>
+
+</form>
+
+<form action="/Admin/deleteitem" method="post" >
+
+    <table border="1" align="center">
+        <tr><th> Delete Product </th> <th><input type="submit" value="Delete" /> </th></tr> 
+    </table>
+
+</form>
+<form action="/Admin/updateitem" method="post" >
+
+    <table border="1" align="center">
+        <tr><th> Update Product </th> <th><input type="submit" value="Update" /> </th></tr>
+    </table>
+
+</form>

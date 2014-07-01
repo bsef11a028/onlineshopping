@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "checkorder";
+}
+
+@model Web_Store.Models.Order
+
+<h2>Order Detail</h2>
+
+<h3>Order @Model.oid</h3>
+<table >
+    
+        <tr><th> Customer Name : @Model.name</th></tr>
+        <tr><th> Address       : @Model.address</th></tr>
+        <tr><th> City          : @Model.city</th></tr>
+        <tr><th> Country       : @Model.country</th></tr>
+    
+</table>
+
+
